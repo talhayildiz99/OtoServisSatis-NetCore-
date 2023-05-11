@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OtoServisSatis.DataLayer\OtoServisSatis.DataLayer.csproj" />
+    <ProjectReference Include="..\OtoServisSatis.Service\OtoServisSatis.Service.csproj" />
   </ItemGroup>
 
 </Project>
