@@ -19,7 +19,7 @@ namespace OtoServisSatis.DataLayer
         public DbSet<Servis> Servisler { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=DESKTOP-DSQNOEI\SQLEXPRESS03;database=OtoServisSatisNetCore;integrated security=true;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer(@"server=DESKTOP-DSQNOEI\SQLEXPRESS03;database=OtoServisSatisNetCore;integrated security=true;MultipleActiveResultSets=True;TrustServerCertificate=True;");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace OtoServisSatis.DataLayer
                 Email = "admin@otoservissatis.tc",
                 KullaniciAdi = "admin",
                 Sifre = "123456",
-                Rol= new Rol {Id= 1},
+                //Rol= new Rol {Id= 1},
                 RolId = 1,
                 Soyadi ="admin",
                 Telefon= "0850"

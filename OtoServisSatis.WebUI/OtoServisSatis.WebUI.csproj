@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OtoServisSatis.DataLayer\OtoServisSatis.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>
