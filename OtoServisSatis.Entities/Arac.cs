@@ -17,7 +17,7 @@ namespace OtoServisSatis.Entities
         public string Renk { get; set; }
         [Display(Name = "Fiyatı"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public decimal Fiyati { get; set; }
-        [StringLength(50), Display(Name = "Fiyatı"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
+        [StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Modeli { get; set; }
         [StringLength(50), Display(Name = "Kasa Tipi"),Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string KasaTipi { get; set; }
