@@ -11,12 +11,12 @@ namespace OtoServisSatis.Entities
     {
         public int Id { get; set; }
         [StringLength(50)]
-        [Display(Name = "Adı")]
+        [Display(Name = "Adı"), Required(ErrorMessage ="{0} Boş Bırakılamaz!")]
         public string Adi { get; set; }
         [StringLength(50)]
-        [Display(Name = "Soyadı")]
+        [Display(Name = "Soyadı"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Soyadi { get; set; }
-        [StringLength(50)]
+        [StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Email { get; set; }
         [StringLength(20)]
         public string? Telefon { get; set; }
@@ -24,12 +24,12 @@ namespace OtoServisSatis.Entities
         [Display(Name = "Kullanıcı Adı")]
         public string KullaniciAdi { get; set; }
         [StringLength(50)]
-        [Display(Name = "Şifre")]
+        [Display(Name = "Şifre"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Sifre { get; set; }
         public bool AktifMi { get; set; }
         [Display(Name ="Eklenme Tarihi"), ScaffoldColumn(false)]
         public DateTime? EklenmeTarihi { get; set; } = DateTime.Now;
-        [Display(Name = "Rol")]
+        [Display(Name = "Rol"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public int RolId { get; set; }
         public virtual Rol? Rol { get; set; }
     }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using OtoServisSatis.Entities;
 using OtoServisSatis.Service.Abstract;
 
-namespace OtoServisSatis.WebUI.Areas.Admin
+namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class UsersController : Controller
@@ -34,7 +34,7 @@ namespace OtoServisSatis.WebUI.Areas.Admin
         // GET: UsersController/Create
         public async Task<ActionResult> CreateAsync()
         {
-            ViewBag.RolId = new SelectList(await _serviceRol.GetAllAsync(),"Id","Adi");
+            ViewBag.RolId = new SelectList(await _serviceRol.GetAllAsync(), "Id", "Adi");
             return View();
         }
 
