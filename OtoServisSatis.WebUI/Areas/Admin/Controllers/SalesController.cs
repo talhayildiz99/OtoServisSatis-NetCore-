@@ -23,6 +23,8 @@ namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
         // GET: SalesController
         public async Task<ActionResult> IndexAsync()
         {
+            ViewBag.AracId = new SelectList(await _serviceArac.GetAllAsync(), "Id", "Modeli");
+            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "Adi");
             var model = await _service.GetAllAsync();
             return View(model);
         }
@@ -113,7 +115,7 @@ namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
             {
                 _service.Delete(satis); 
                 _service.Save();
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             catch
             {
